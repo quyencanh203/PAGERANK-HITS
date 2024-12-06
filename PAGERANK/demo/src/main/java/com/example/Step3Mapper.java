@@ -3,14 +3,12 @@ package com.example;
 import java.io.*;
 import java.util.HashMap;
 
-import javax.naming.Context;
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Mapper;
-import org.w3c.dom.Text;
+import org.apache.hadoop.io.Text; 
 
 public class Step3Mapper extends Mapper<LongWritable, Text, FloatWritable, Text> 
 {
@@ -57,22 +55,20 @@ public class Step3Mapper extends Mapper<LongWritable, Text, FloatWritable, Text>
 		br.close();
 	}
 	
-	public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException
-	{
+	public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
 		String[] split = value.toString().split("\t");
-
-	    // Kiểm tra điều kiện
-        if (split.length < 2) {
-            return; // Bỏ qua dòng không hợp lệ
-        }
-
+		
+		if (split.length < 2) {
+			return;
+		}
+		
 		float rank = Float.parseFloat(split[1]);
 		String url = urls.get(split[0]);
-	    // Kiểm tra url
+		
 		if (url == null) {
-			url = split[0]; // Dùng giá trị gốc nếu không tìm thấy
+			url = split[0];
 		}
+		
 		context.write(new FloatWritable(rank), new Text(url));
 	}
-	
 }
