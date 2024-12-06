@@ -73,6 +73,7 @@ public class HITS {
         
         // Sử dụng lastNormalizedIndex thay vì maxRuns
         success = success && step3(args[1] + "/normalized" + lastNormalizedIndex, args[1] + "/hitranking", args[2]);
+        
         if (Boolean.parseBoolean(args[6])) {
             showResults(fs, args[1] + "/hitranking");
         }
