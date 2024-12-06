@@ -1,0 +1,9 @@
+/mnt/d/HITS/demo/src/main/java/com/example/NormalizeMapper.java
+/mnt/d/HITS/demo/src/main/java/com/example/NormalizeReducer.java
+/mnt/d/HITS/demo/src/main/java/com/example/HITS.java
+/mnt/d/HITS/demo/src/main/java/com/example/Step1Mapper.java
+/mnt/d/HITS/demo/src/main/java/com/example/Step1Reducer.java
+/mnt/d/HITS/demo/src/main/java/com/example/SortFloatComparator.java
+/mnt/d/HITS/demo/src/main/java/com/example/Step2Reducer.java
+/mnt/d/HITS/demo/src/main/java/com/example/Step3Mapper.java
+/mnt/d/HITS/demo/src/main/java/com/example/Step2Mapper.java

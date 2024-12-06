@@ -1,0 +1,9 @@
+com/example/Step1Mapper.class
+com/example/Step2Mapper.class
+com/example/NormalizeReducer.class
+com/example/SortFloatComparator.class
+com/example/Step1Reducer.class
+com/example/NormalizeMapper.class
+com/example/Step3Mapper.class
+com/example/HITS.class
+com/example/Step2Reducer.class
