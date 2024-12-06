@@ -55,8 +55,24 @@ public class HITS {
             }
         }
 
-        success = success && step3(args[1] + "/normalized" + (lastAuthorities.size() - 1), args[1] + "/hitranking", args[2]);
-
+        // success = success && step3(args[1] + "/normalized" + (lastAuthorities.size() - 1), args[1] + "/hitranking", args[2]);
+        // Tìm thư mục normalized cuối cùng
+        int lastNormalizedIndex = -1;
+        for (int j = maxRuns; j >= 0; j--) {
+            Path normalizedPath = new Path(args[1] + "/normalized" + j);
+            if (fs.exists(normalizedPath)) {
+                lastNormalizedIndex = j;
+                break;
+            }
+        }
+        
+        if (lastNormalizedIndex == -1) {
+            System.err.println("No normalized directory found!");
+            System.exit(1);
+        }
+        
+        // Sử dụng lastNormalizedIndex thay vì maxRuns
+        success = success && step3(args[1] + "/normalized" + lastNormalizedIndex, args[1] + "/hitranking", args[2]);
         if (Boolean.parseBoolean(args[6])) {
             showResults(fs, args[1] + "/hitranking");
         }
