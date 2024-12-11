@@ -64,10 +64,10 @@ Lệnh trên sẽ:
 chmod +x run.sh
 ```
 ### 4. đóng góp bởi.
-[quyencanh203](https://github.com/quyencanh203) \\
-[ngocnhat]() \\
-[quanpham]() \\
-[huydinh]() \\
+- [quyencanh203](https://github.com/quyencanh203)
+- [ngocnhat]()
+- [quanpham]()
+- [huydinh]()
 
 ## Tài liệu tham khảo
 - [Apache Hadoop Documentation](https://hadoop.apache.org/)
