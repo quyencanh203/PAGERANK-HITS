@@ -64,7 +64,7 @@ Lệnh trên sẽ:
 chmod +x run.sh
 ```
 ### 4. đóng góp bởi.
-- [quyencanh203](https://github.com/quyencanh203)
+- [quyencanh](https://github.com/quyencanh203)
 - [ngocnhat]()
 - [quanpham]()
 - [huydinh]()
