@@ -11,7 +11,7 @@ Dự án sử dụng Apache Hadoop để xử lý dữ liệu lớn và Maven đ
 
 ## Yêu cầu
 - **Hadoop**: Phiên bản 3.4.0 hoặc cao hơn.
-- **Java**: Phiên bản 8 hoặc cao hơn.
+- **Java**: Phiên bản 8 hoặc cao hơn (trong dự án này là java 11).
 - **Maven**: Để build dự án.
 - **Hệ thống HDFS**: Để lưu trữ dữ liệu đầu vào và đầu ra.
 
