@@ -18,8 +18,8 @@ Dự án sử dụng Apache Hadoop để xử lý dữ liệu lớn và Maven đ
 ---
 
 ## Cấu trúc Dự án
-- `src/main/java/com/example/PageRank`: Chứa mã nguồn của thuật toán PageRank.
-- `src/main/java/com/example/HITS`: Chứa mã nguồn của thuật toán HITS.
+- `PAGERANK/src/main/java/com/example/demo`: Chứa mã nguồn của thuật toán PageRank.
+- `HITS/src/main/java/com/example/demo`: Chứa mã nguồn của thuật toán HITS.
 - `input/data.txt`: Tệp dữ liệu đầu vào chứa thông tin đồ thị (các liên kết giữa các nút).
 - `output/`: Thư mục lưu kết quả đầu ra sau khi chạy.
 
@@ -33,84 +33,41 @@ Dự án sử dụng Apache Hadoop để xử lý dữ liệu lớn và Maven đ
 ### 2. Chạy thuật toán PageRank
 Chạy lệnh sau trong terminal:
 ```bash
-./run_pagerank.sh
+./run.sh (trong thư mục code của PageRank)
 ```
 
 Lệnh trên sẽ:
 - Biên dịch mã nguồn bằng Maven.
 - Tải dữ liệu đầu vào từ HDFS.
 - Thực thi thuật toán PageRank trên Hadoop.
-- Lưu kết quả đầu ra vào thư mục `output/pagerank/` trên HDFS.
+- Lưu kết quả đầu ra vào thư mục `output` trên HDFS.
 
-**Ghi chú**: Tệp `run_pagerank.sh` cần được thiết lập quyền thực thi. Nếu chưa thiết lập, chạy lệnh sau:
+**Ghi chú**: Tệp `run.sh` cần được thiết lập quyền thực thi. Nếu chưa thiết lập, chạy lệnh sau:
 ```bash
-chmod +x run_pagerank.sh
+chmod +x run.sh
 ```
 
 ### 3. Chạy thuật toán HITS
 Chạy lệnh sau trong terminal:
 ```bash
-./run_hits.sh
+./run.sh (trong thư mục code của Hits)
 ```
 
 Lệnh trên sẽ:
 - Biên dịch mã nguồn bằng Maven.
 - Tải dữ liệu đầu vào từ HDFS.
 - Thực thi thuật toán HITS trên Hadoop.
-- Lưu kết quả đầu ra vào thư mục `output/hits/` trên HDFS.
+- Lưu kết quả đầu ra vào thư mục `output` trên HDFS.
 
-**Ghi chú**: Tương tự, cần thiết lập quyền thực thi cho tệp `run_hits.sh`:
+**Ghi chú**: Tương tự, cần thiết lập quyền thực thi cho tệp `run.sh`:
 ```bash
-chmod +x run_hits.sh
+chmod +x run.sh
 ```
-
----
-
-## Nội dung tệp `run_pagerank.sh`
-Dưới đây là nội dung mẫu của tệp `run_pagerank.sh`:
-```bash
-#!/bin/bash
-# Biên dịch dự án bằng Maven
-mvn clean package
-
-# Đưa tệp đầu vào vào HDFS
-hdfs dfs -mkdir -p /user/input
-hdfs dfs -put -f input/data.txt /user/input/
-
-# Chạy PageRank trên Hadoop
-hadoop jar target/bigdata-project-1.0.jar com.example.PageRank /user/input/data.txt /user/output/pagerank
-
-# Hiển thị kết quả
-hdfs dfs -cat /user/output/pagerank/part-00000
-```
-
----
-
-## Nội dung tệp `run_hits.sh`
-Dưới đây là nội dung mẫu của tệp `run_hits.sh`:
-```bash
-#!/bin/bash
-# Biên dịch dự án bằng Maven
-mvn clean package
-
-# Đưa tệp đầu vào vào HDFS
-hdfs dfs -mkdir -p /user/input
-hdfs dfs -put -f input/data.txt /user/input/
-
-# Chạy HITS trên Hadoop
-hadoop jar target/bigdata-project-1.0.jar com.example.HITS /user/input/data.txt /user/output/hits
-
-# Hiển thị kết quả
-hdfs dfs -cat /user/output/hits/part-00000
-```
-
----
-
-## Lưu ý
-- Kiểm tra các đường dẫn trong mã để đảm bảo chúng phù hợp với cấu hình HDFS của bạn.
-- Nếu gặp lỗi, kiểm tra nhật ký (`logs`) của Hadoop để xác định và sửa lỗi.
-
----
+### 4. đóng góp bởi.
+[quyencanh203](https://github.com/quyencanh203)
+[ngocnhat]()
+[quanpham]()
+[huydinh]()
 
 ## Tài liệu tham khảo
 - [Apache Hadoop Documentation](https://hadoop.apache.org/)
