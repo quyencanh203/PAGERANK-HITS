@@ -29,6 +29,7 @@ Dự án sử dụng Apache Hadoop để xử lý dữ liệu lớn và Maven đ
 
 ### 1. Chuẩn bị dữ liệu
 - Đảm bảo rằng tệp dữ liệu đầu vào có định dạng chính xác và đặt trong thư mục `input/` với tên là `data.txt`.
+- Dữ liệu lớn https://www.limfinity.com/ir/
 
 ### 2. Chạy thuật toán PageRank
 Chạy lệnh sau trong terminal:
