@@ -4,12 +4,12 @@
 Dự án này triển khai các thuật toán PageRank và HITS để phân tích cấu trúc của đồ thị. Đây là một công cụ hữu ích để hiểu cách mà các trang web hoặc các nút trong mạng tương tác và liên kết với nhau.
 
 ## Cấu trúc thư mục
-PAGERANK-HITS/
-├── HITS/ \n
-│ └── demo/ \n
-├── PAGEANK/ \n
-│ └── demo/ \n
-└── .gitignore \n
+PAGERANK-HITS/ \\
+├── HITS/ \\
+│ └── demo/ \\
+├── PAGEANK/ \\
+│ └── demo/ \\
+└── .gitignore \\
 
 ## Hướng dẫn chạy dữ án.
 - git clone https://github.com/<username>/PAGERANK-HITS.git
