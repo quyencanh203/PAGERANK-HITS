@@ -5,11 +5,11 @@ Dự án này triển khai các thuật toán PageRank và HITS để phân tíc
 
 ## Cấu trúc thư mục
 PAGERANK-HITS/
-├── HITS/
-│ └── demo/
-├── PAGEANK/
-│ └── demo/
-└── .gitignore
+├── HITS/ \n
+│ └── demo/ \n
+├── PAGEANK/ \n
+│ └── demo/ \n
+└── .gitignore \n
 
 ## Hướng dẫn chạy dữ án.
 - git clone https://github.com/<username>/PAGERANK-HITS.git
